@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shuchismita Mallick | Data Scientist</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <header>
+        <h1>Shuchismita Mallick</h1>
+        <p>Data Scientist | ML Engineer</p>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="resume.pdf" target="_blank">Resume</a>
+            <button id="mode-toggle">🌙</button>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>About Me</h2>
+            <p>I am a data scientist with experience in building machine learning solutions, real-time prediction systems, and recommendation engines. I specialize in Python, SQL, and tools like Streamlit, Databricks, and Hugging Face.</p>
+            <p>Currently working at <strong>Enqurious</strong>, building data-driven products for EdTech and finance domains.</p>
+        </section>
+
+        <section>
+            <h2>Connect</h2>
+            <ul>
+                <li><a href="mailto:mallickshuchismita25@gmail.com">Email</a></li>
+                <li><a href="https://www.linkedin.com/in/shuchismita-mallick/" target="_blank">LinkedIn</a></li>
+                <li><a href="https://github.com/Shuchismita2000" target="_blank">GitHub</a></li>
+                <li><a href="https://medium.com/@mallickshuchismita" target="_blank">Medium</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Shuchismita Mallick</p>
+    </footer>
+
+    <script>
+        const toggle = document.getElementById('mode-toggle');
+        toggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            toggle.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+        });
+    </script>
+</body>
+</html>

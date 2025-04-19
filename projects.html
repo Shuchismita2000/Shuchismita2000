@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Shuchismita Mallick</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <header>
+        <h1>Projects</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="resume.pdf" target="_blank">Resume</a>
+            <button id="mode-toggle">🌙</button>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>📚 Book Recommendation Chatbot</h2>
+            <p>Personalized book recommendation system using NLP, embeddings, and conversational AI. Built using Hugging Face, Pinecone, and Streamlit.</p>
+            <ul>
+                <li><a href="https://github.com/Shuchismita2000/GenAI-Projects/tree/main/Book_Recommendation_Bot" target="_blank">GitHub Repo</a></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>📊 Customer Churn Prediction</h2>
+            <p>Streamlit app for predicting customer churn with interactive data exploration and deployed machine learning models.</p>
+            <ul>
+                <li><a href="https://github.com/Shuchismita2000/customer-churn-prediction" target="_blank">GitHub Repo</a></li>
+                <li><a href="https://customer-churn-prediction-427t.onrender.com/" target="_blank">Live Demo</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Shuchismita Mallick</p>
+    </footer>
+
+    <script>
+        const toggle = document.getElementById('mode-toggle');
+        toggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            toggle.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+        });
+    </script>
+</body>
+</html>

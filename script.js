@@ -128,8 +128,14 @@ modal.addEventListener('click', e => {
 
 const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelector('.nav-links');
+const navLinksItems = document.querySelectorAll('.nav-links a');
 
 navToggle.addEventListener('click', () => {
     navLinks.classList.toggle('open');
   });
 
+navLinksItems.forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+    });
+  });

@@ -160,12 +160,14 @@ body {
   
   /* Override about-details grid inside hero to be single column */
   .hero-skills.about-details {
-    grid-template-columns: 1fr !important;
+
+    grid-template-columns: repeat(3, 1fr);
+    
   }
   
   /* Keep about-section styles as is */
   .about-section {
-    background: var(--brown-light);
+    background: var(--brown-dark);
     border-radius: 12px;
     padding: 1.2rem;
     transition: transform 0.3s ease;
@@ -455,10 +457,12 @@ body {
 }
 
 .about-section {
-    background: var(--brown-light);
+    background: #fff;
     border-radius: 12px;
     padding: 1.2rem;
     transition: transform 0.3s ease;
+    color: var(--brown-main);
+    border: 1px solid var(--brown-accent);
 }
 
 .about-section:hover {

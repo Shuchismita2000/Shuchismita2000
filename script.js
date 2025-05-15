@@ -124,3 +124,12 @@ modalClose.addEventListener('click', () => modal.classList.remove('active'));
 modal.addEventListener('click', e => {
     if (e.target === modal) modal.classList.remove('active');
 });
+
+
+const navToggle = document.querySelector('.nav-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+navToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+  });
+

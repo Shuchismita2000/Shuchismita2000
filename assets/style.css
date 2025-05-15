@@ -20,7 +20,7 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1600px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -40,7 +40,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    max-width: 1200px;
+    max-width: none;
     margin: 0 auto;
 }
 
@@ -365,7 +365,7 @@ body {
 }
 
 .about-content {
-    max-width: 900px;
+    max-width: 1600px;
     margin: 0 auto;
     position: relative;
     z-index: 1;
@@ -718,7 +718,7 @@ footer {
 }
 
 .experience-list {
-    max-width: 800px;
+    max-width: 1600px;
     margin: 0 auto;
     padding: 0 1rem;
 }
@@ -845,7 +845,7 @@ footer {
     position: relative;
     margin: 0 auto;
     padding: 2rem 0 2rem 0.5rem;
-    max-width: 800px;
+    max-width: 1200px;
 }
 .timeline::before {
     content: '';

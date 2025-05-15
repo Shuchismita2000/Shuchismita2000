@@ -30,31 +30,67 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// Project modal logic
+// Project modal data updated with all projects
 const projectData = {
     office1: {
         img: 'project-office1.jpg',
-        title: 'Customer Risk Prediction',
-        desc: 'Developed and deployed ML models to Databricks endpoints for real-time customer risk prediction, improving underwriting efficiency.',
-        tags: ['Python', 'Databricks', 'MLflow']
-    },
-    office2: {
-        img: 'project-office2.jpg',
-        title: 'Market-Mix Modeling',
+        title: 'Market Mix Modeling for Optimized Budget Allocation',
         desc: 'Prepared end-to-end solutions in Azure ML Studio for market-mix modeling and dynamic pricing for price optimization.',
         tags: ['Azure ML Studio', 'Regression']
     },
+    office2: {
+        img: 'project-office2.jpg',
+        title: 'Dynamic Pricing for Optimizing Pricing Strategy',
+        desc: 'Implemented dynamic pricing models to optimize product pricing strategies, increasing revenue and market competitiveness.',
+        tags: ['Azure ML Studio', 'Regression']
+    },
+    office3: {
+        img: 'project-office3.jpg',
+        title: 'Predicting Optimal Channel for New Product Launch',
+        desc: 'Built predictive models to identify the most effective marketing channels for launching new products, improving launch success rates.',
+        tags: ['Python', 'Classification', 'Databricks']
+    },
+    office4: {
+        img: 'project-office4.jpg',
+        title: 'POC: AI Agent for Content Inventory Exploration',
+        desc: 'Developed a proof-of-concept AI agent to help the Content Development Team explore and analyze content inventory efficiently.',
+        tags: ['AI Agent', 'Content Team']
+    },
+    office5: {
+        img: 'project-office5.jpg',
+        title: 'POC: AI Agent for Reporting to Client',
+        desc: 'Created a proof-of-concept AI agent for the Ops Team to automate and streamline client reporting processes.',
+        tags: ['AI Agent', 'Ops Team']
+    },
     self1: {
         img: 'project-self1.jpg',
-        title: 'Traffic Sign Classification',
-        desc: 'Designed and implemented a deep learning pipeline using CNNs to classify traffic signs from image datasets.',
-        tags: ['Python', 'Deep Learning', 'CNN']
+        title: 'Market Mix Modeling',
+        desc: 'Built a market mix model to analyze and optimize marketing spend across multiple channels for improved ROI.',
+        tags: ['Python', 'Marketing Analytics']
     },
     self2: {
         img: 'project-self2.jpg',
-        title: 'Uplift Modeling for Marketing',
-        desc: 'Implemented uplift modeling techniques to predict the incremental impact of marketing strategies for personalized campaigns.',
-        tags: ['Python', 'Uplift Modeling']
+        title: 'Water Profiling Score Project',
+        desc: 'Developed a scoring system to profile water quality using data analysis and machine learning techniques.',
+        tags: ['Python', 'Data Science']
+    },
+    self3: {
+        img: 'project-self3.jpg',
+        title: 'Book Recommendation (RAG Chain)',
+        desc: 'Implemented a book recommendation system using Retrieval-Augmented Generation (RAG) and NLP techniques.',
+        tags: ['Python', 'RAG', 'NLP']
+    },
+    self4: {
+        img: 'project-self4.jpg',
+        title: 'Customer Churn Prediction',
+        desc: 'Created predictive models to identify customers at risk of churning, enabling targeted retention strategies.',
+        tags: ['Python', 'Classification']
+    },
+    self5: {
+        img: 'project-self5.jpg',
+        title: 'Customer Purchase Behavior',
+        desc: 'Analyzed and modeled customer purchase patterns to uncover insights and drive business growth.',
+        tags: ['Python', 'EDA']
     }
 };
 
@@ -65,19 +101,21 @@ const modalDesc = document.querySelector('.modal-desc');
 const modalTags = document.querySelector('.modal-tags');
 const modalClose = document.querySelector('.modal-close');
 
-// Open modal on card click
+// Open modal on card click with safety check
 Array.from(document.querySelectorAll('.project-card')).forEach(card => {
     card.addEventListener('click', () => {
         const key = card.getAttribute('data-project');
         const data = projectData[key];
-        if (data) {
-            modalImg.src = data.img;
-            modalImg.alt = data.title;
-            modalTitle.textContent = data.title;
-            modalDesc.textContent = data.desc;
-            modalTags.innerHTML = data.tags.map(tag => `<span>${tag}</span>`).join(' ');
-            modal.classList.add('active');
+        if (!data) {
+            alert('Sorry, project details not available yet!');
+            return;
         }
+        modalImg.src = data.img;
+        modalImg.alt = data.title;
+        modalTitle.textContent = data.title;
+        modalDesc.textContent = data.desc;
+        modalTags.innerHTML = data.tags.map(tag => `<span>${tag}</span>`).join(' ');
+        modal.classList.add('active');
     });
 });
 
@@ -85,4 +123,4 @@ Array.from(document.querySelectorAll('.project-card')).forEach(card => {
 modalClose.addEventListener('click', () => modal.classList.remove('active'));
 modal.addEventListener('click', e => {
     if (e.target === modal) modal.classList.remove('active');
-}); 
+});

@@ -93,24 +93,65 @@
     <section id="projects" class="projects">
         <div class="container">
             <h2>Projects</h2>
-            <div class="project-grid">
-                <!-- Project cards will be added here -->
-                <div class="project-card">
-                    <h3>Project 1</h3>
-                    <p>Description of your first data science project</p>
-                    <div class="project-tags">
-                        <span>Python</span>
-                        <span>Machine Learning</span>
+            <div class="project-subsection">
+                <h3 class="project-subheading">Highlight Projects done in Office</h3>
+                <div class="project-grid">
+                    <!-- Office Projects -->
+                    <div class="project-card" data-project="office1">
+                        <img src="project-office1.jpg" alt="Customer Risk Prediction" class="project-thumb" />
+                        <h4>Customer Risk Prediction</h4>
+                        <p>Developed and deployed ML models to Databricks endpoints for real-time customer risk prediction, improving underwriting efficiency.</p>
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>Databricks</span>
+                            <span>MLflow</span>
+                        </div>
+                    </div>
+                    <div class="project-card" data-project="office2">
+                        <img src="project-office2.jpg" alt="Market-Mix Modeling" class="project-thumb" />
+                        <h4>Market-Mix Modeling</h4>
+                        <p>Prepared end-to-end solutions in Azure ML Studio for market-mix modeling and dynamic pricing for price optimization.</p>
+                        <div class="project-tags">
+                            <span>Azure ML Studio</span>
+                            <span>Regression</span>
+                        </div>
                     </div>
                 </div>
-                <div class="project-card">
-                    <h3>Project 2</h3>
-                    <p>Description of your second data science project</p>
-                    <div class="project-tags">
-                        <span>Data Analysis</span>
-                        <span>Visualization</span>
+            </div>
+            <div class="project-subsection">
+                <h3 class="project-subheading">Highlight Projects done by Myself for Self-Learning</h3>
+                <div class="project-grid">
+                    <!-- Self-Learning Projects -->
+                    <div class="project-card" data-project="self1">
+                        <img src="project-self1.jpg" alt="Traffic Sign Classification" class="project-thumb" />
+                        <h4>Traffic Sign Classification</h4>
+                        <p>Designed and implemented a deep learning pipeline using CNNs to classify traffic signs from image datasets.</p>
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>Deep Learning</span>
+                            <span>CNN</span>
+                        </div>
+                    </div>
+                    <div class="project-card" data-project="self2">
+                        <img src="project-self2.jpg" alt="Uplift Modeling for Marketing" class="project-thumb" />
+                        <h4>Uplift Modeling for Marketing</h4>
+                        <p>Implemented uplift modeling techniques to predict the incremental impact of marketing strategies for personalized campaigns.</p>
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>Uplift Modeling</span>
+                        </div>
                     </div>
                 </div>
+            </div>
+        </div>
+        <!-- Project Modal -->
+        <div id="project-modal" class="project-modal">
+            <div class="modal-content">
+                <span class="modal-close">&times;</span>
+                <img src="" alt="Project Image" class="modal-img" />
+                <h4 class="modal-title"></h4>
+                <p class="modal-desc"></p>
+                <div class="modal-tags"></div>
             </div>
         </div>
     </section>

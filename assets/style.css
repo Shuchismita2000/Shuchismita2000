@@ -69,79 +69,141 @@ body {
 }
 
 /* Hero Section */
-.hero {
-    position: relative;
+/* Hero layout grid: image-left, text-center, skills-right */
+.hero-layout {
+    display: grid;
+    grid-template-columns: 1.2fr 2fr 2fr;
+    gap: 2rem;
+    align-items: center;
+    text-align: left;
+    min-height: 75vh;
+    padding-top: 80px; /* keep space from fixed navbar */
+  }
+  
+  .hero-image img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(124, 94, 60, 0.3);
+  }
+  .hero-image-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* This centers children horizontally */
+    gap: 1rem;
+    text-align: center; /* Center text inside title and button */
+  }
+  
+  .image-wrapper {
+    width: 260px;  /* Adjust size as needed */
+    height: 260px;
+    border: 5px solid var(--brown-main);
+    border-radius: 50%;
     overflow: hidden;
-    height: 100vh;
+    box-shadow: 0 8px 20px rgba(124, 94, 60, 0.3);
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    background: linear-gradient(135deg, #f7f3ef 0%, #e7d7c9 100%);
-    padding-top: 60px;
-}
-
-.hero::before, .hero::after {
-    content: '';
-    position: absolute;
-    border-radius: 50%;
-    opacity: 0.18;
-    z-index: 0;
-}
-
-.hero::before {
-    width: 320px;
-    height: 320px;
-    left: -120px;
-    top: 60px;
-    background: var(--brown-main);
-    animation: float1 8s ease-in-out infinite alternate;
-}
-
-.hero::after {
-    width: 220px;
-    height: 220px;
-    right: -80px;
-    bottom: 40px;
-    background: var(--brown-accent);
-    animation: float2 10s ease-in-out infinite alternate;
-}
-
-@keyframes float1 {
-    0% { transform: translateY(0) scale(1); }
-    100% { transform: translateY(30px) scale(1.08); }
-}
-
-@keyframes float2 {
-    0% { transform: translateY(0) scale(1); }
-    100% { transform: translateY(-24px) scale(1.04); }
-}
-
-.hero .container {
-    position: relative;
-    z-index: 1;
-}
-
-.hero h1 {
-    font-size: 2.7rem;
+    background: var(--brown-light);
     margin-bottom: 1rem;
-    color: var(--brown-main);
-    font-weight: bold;
-}
-
-.hero p {
-    font-size: 1.25rem;
+  }
+  
+  .image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 50%; /* Keep image round inside */
+  }
+  
+  .hero-text {
+    text-align: center;
     color: var(--brown-dark);
-    margin-bottom: 0.7em;
-}
-
-.hero .greeting {
-    font-size: 1.1rem;
-    color: var(--brown-accent);
-    margin-bottom: 1.5em;
-    font-style: italic;
-}
-
+  }
+  
+  .hero-text h1 {
+    font-size: 2.8rem;
+    color: var(--brown-main);
+    margin-bottom: 0.8rem;
+  }
+  
+  .hero-text p {
+    font-size: 1.15rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .btn-download {
+    display: inline-block;
+    background-color: var(--brown-main);
+    color: var(--brown-light);
+    padding: 0.7rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-download:hover {
+    background-color: var(--brown-accent);
+  }
+  
+  /* Adjust skill boxes container to be vertical and aligned right */
+  .hero-skills {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 1.5rem;
+    justify-items: stretch;
+    align-items: start;
+    /* keep vertical center alignment if needed */
+  }
+  
+  /* Override about-details grid inside hero to be single column */
+  .hero-skills.about-details {
+    grid-template-columns: 1fr !important;
+  }
+  
+  /* Keep about-section styles as is */
+  .about-section {
+    background: var(--brown-light);
+    border-radius: 12px;
+    padding: 1.2rem;
+    transition: transform 0.3s ease;
+    text-align: left;
+    box-shadow: none;
+  }
+  
+  /* Responsive */
+  @media (max-width: 1100px) {
+    .hero-layout {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      text-align: center;
+    }
+    .hero-text {
+      order: 2;
+    }
+    .hero-image {
+      order: 1;
+      margin: 0 auto;
+    }
+    .hero-skills {
+      order: 3;
+    }
+    .hero-skills.about-details {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+    .about-section {
+      text-align: center;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .hero-skills.about-details {
+      grid-template-columns: 1fr !important;
+    }
+  }
+  
 /* Projects Section */
 .projects {
     padding: 5rem 0;

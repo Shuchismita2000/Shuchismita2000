@@ -3,49 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shuchismita Mallick | Data Scientist</title>
-    <link rel="stylesheet" href="assets/style.css">
+    <title>Data Science Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <h1>Shuchismita Mallick</h1>
-        <p>Data Scientist | ML Engineer</p>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="projects.html">Projects</a>
-            <a href="resume.pdf" target="_blank">Resume</a>
-            <button id="mode-toggle">🌙</button>
-        </nav>
-    </header>
-
-    <main>
-        <section>
-            <h2>About Me</h2>
-            <p>I am a data scientist with experience in building machine learning solutions, real-time prediction systems, and recommendation engines. I specialize in Python, SQL, and tools like Streamlit, Databricks, and Hugging Face.</p>
-            <p>Currently working at <strong>Enqurious</strong>, building data-driven products for EdTech and finance domains.</p>
-        </section>
-
-        <section>
-            <h2>Connect</h2>
-            <ul>
-                <li><a href="mailto:mallickshuchismita25@gmail.com">Email</a></li>
-                <li><a href="https://www.linkedin.com/in/shuchismita-mallick/" target="_blank">LinkedIn</a></li>
-                <li><a href="https://github.com/Shuchismita2000" target="_blank">GitHub</a></li>
-                <li><a href="https://medium.com/@mallickshuchismita" target="_blank">Medium</a></li>
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="#home" class="nav-logo">
+                <span class="logo-circle">SM</span> <span class="logo-name">Shuchismita</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-        </section>
-    </main>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="greeting">
+                <span class="wave">👋</span> Hi there! Welcome to my portfolio.
+            </div>
+            <h1>I'm Shuchismita Mallick</h1>
+            <p>Data Scientist with 3 years of experience.<br>Passionate about turning data into actionable insights.</p>
+        </div>
+    </section>
+
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2>Experience</h2>
+            <div class="experience-list">
+                <div class="experience-item">
+                    <h3>Data Scientist &mdash; [Your Company Name]</h3>
+                    <p>Worked on end-to-end machine learning projects, including data preprocessing, model development, and deployment. Collaborated with cross-functional teams to deliver actionable business insights.</p>
+                </div>
+                <div class="experience-item">
+                    <h3>Machine Learning Intern &mdash; [Previous Company/Institute]</h3>
+                    <p>Developed and evaluated ML models for real-world datasets, contributed to research and automation tasks, and presented findings to stakeholders.</p>
+                </div>
+                <!-- Add more experience items as needed -->
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="project-grid">
+                <!-- Project cards will be added here -->
+                <div class="project-card">
+                    <h3>Project 1</h3>
+                    <p>Description of your first data science project</p>
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>Machine Learning</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Project 2</h3>
+                    <p>Description of your second data science project</p>
+                    <div class="project-tags">
+                        <span>Data Analysis</span>
+                        <span>Visualization</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <i class="fas fa-code"></i>
+                    <h3>Programming</h3>
+                    <p>Python, SQL</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-brain"></i>
+                    <h3>Machine Learning</h3>
+                    <p>Regression, Classification, Clustering, EDA, Feature Engineering, Hyperparameter Tuning, Model Evaluation, MLflow, Datasets Curation</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-project-diagram"></i>
+                    <h3>Version Control</h3>
+                    <p>Git, MLflow, VS Code</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-database"></i>
+                    <h3>Databases</h3>
+                    <p>MySQL, PostgreSQL</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-cloud"></i>
+                    <h3>Cloud Platforms</h3>
+                    <p>Databricks, Render</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <div class="contact-icons">
+                <a href="mailto:your.email@example.com" class="contact-icon-link" title="Email" target="_blank" rel="noopener">
+                    <span class="contact-icon"><i class="fas fa-envelope"></i></span>
+                </a>
+                <a href="https://linkedin.com/in/yourprofile" class="contact-icon-link" title="LinkedIn" target="_blank" rel="noopener">
+                    <span class="contact-icon"><i class="fab fa-linkedin-in"></i></span>
+                </a>
+                <a href="https://github.com/yourusername" class="contact-icon-link" title="GitHub" target="_blank" rel="noopener">
+                    <span class="contact-icon"><i class="fab fa-github"></i></span>
+                </a>
+            </div>
+        </div>
+    </section>
 
     <footer>
-        <p>© 2025 Shuchismita Mallick</p>
+        <div class="container">
+            <p>&copy; 2024 Data Science Portfolio. All rights reserved.</p>
+        </div>
     </footer>
 
-    <script>
-        const toggle = document.getElementById('mode-toggle');
-        toggle.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-            toggle.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
-</html>
+</html> 

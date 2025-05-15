@@ -318,6 +318,145 @@ body {
     }
 }
 
+/* About Me Section */
+.about {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #f7f3ef 0%, #e7d7c9 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.about::before {
+    content: '';
+    position: absolute;
+    left: -120px;
+    top: 40px;
+    width: 220px;
+    height: 220px;
+    background: var(--brown-accent);
+    opacity: 0.10;
+    border-radius: 50%;
+    z-index: 0;
+    animation: float1 9s ease-in-out infinite alternate;
+}
+
+.about::after {
+    content: '';
+    position: absolute;
+    right: -80px;
+    bottom: 30px;
+    width: 140px;
+    height: 140px;
+    background: var(--brown-main);
+    opacity: 0.10;
+    border-radius: 50%;
+    z-index: 0;
+    animation: float2 11s ease-in-out infinite alternate;
+}
+
+.about h2 {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-size: 2.5rem;
+    color: var(--brown-main);
+    position: relative;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.about-content {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.about-text {
+    background: #fff;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(124, 94, 60, 0.08);
+}
+
+.about-intro {
+    font-size: 1.1rem;
+    color: var(--brown-dark);
+    margin-bottom: 2rem;
+    line-height: 1.7;
+    text-align: center;
+}
+
+.about-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.about-section {
+    background: var(--brown-light);
+    border-radius: 12px;
+    padding: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.about-section:hover {
+    transform: translateY(-4px);
+}
+
+.about-section h3 {
+    color: var(--brown-main);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.about-section h3 i {
+    color: var(--brown-accent);
+}
+
+.skill-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.skill-box {
+    background: #fff;
+    color: var(--brown-main);
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: 1px solid var(--brown-accent);
+    transition: all 0.3s ease;
+}
+
+.skill-box:hover {
+    background: var(--brown-main);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .about-details {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-text {
+        padding: 1.5rem;
+    }
+    
+    .about-section {
+        padding: 1rem;
+    }
+    
+    .about-intro {
+        font-size: 1rem;
+    }
+}
+
 /* Skills Section */
 .skills {
     padding: 5rem 0;
@@ -470,6 +609,11 @@ body {
     background: var(--brown-accent);
     transform: scale(1.15);
     box-shadow: 0 6px 18px rgba(176, 141, 87, 0.18);
+}
+.contact-icon i {
+    color: #fff !important;
+    font-size: 1.15rem;
+    transition: color 0.18s;
 }
 
 @media (max-width: 600px) {

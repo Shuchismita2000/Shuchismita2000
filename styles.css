@@ -235,7 +235,9 @@ body {
   /* Override about-details grid inside hero to be single column */
   .hero-skills.about-details {
 
-    grid-template-columns: repeat(3, 1fr);
+    display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 10px; /* Adjust this value to increase or decrease the gap */
     
   }
   
@@ -366,93 +368,192 @@ body {
 .project-modal {
     display: none;
     position: fixed;
-    z-index: 10000;
-    left: 0;
     top: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(60, 40, 20, 0.25);
-    align-items: center;
-    justify-content: center;
-    animation: fadein 0.3s;
-}
-.project-modal.active {
-    display: flex;
-}
-.modal-content {
-    background: #fff;
-    border-radius: 18px;
-    box-shadow: 0 8px 40px rgba(124, 94, 60, 0.18);
-    padding: 2.2rem 2rem 1.7rem 2rem;
-    max-width: 420px;
-    width: 92vw;
-    position: relative;
-    animation: modalpop 0.35s cubic-bezier(.23,1.02,.64,1.01);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-@keyframes modalpop {
-    0% { transform: scale(0.85) translateY(40px); opacity: 0; }
-    100% { transform: scale(1) translateY(0); opacity: 1; }
-}
-.modal-close {
-    position: absolute;
-    top: 1.1rem;
-    right: 1.3rem;
-    font-size: 2rem;
-    color: var(--brown-main);
-    cursor: pointer;
-    font-weight: bold;
-    transition: color 0.2s;
-    z-index: 2;
-}
-.modal-close:hover {
-    color: var(--brown-accent);
-}
-.modal-img {
+    left: 0;
     width: 100%;
-    max-width: 320px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 1.2rem;
-    background: #e7d7c9;
-    border: 1px solid #f7f3ef;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
+
+.project-modal.active {
+    opacity: 1;
+}
+
+.modal-content {
+    background-color: var(--brown-light);
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 1200px; /* Restore the previous max-width */
+    width: 90%; /* Keep 90% width for responsiveness */
+    max-height: 90vh; /* Add back max-height */
+    overflow-y: auto; /* Add back overflow-y for scrolling */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.modal-top-section {
+    display: flex; /* Use flexbox for the top section */
+    align-items: center; /* Vertically align items */
+    gap: 20px; /* Space between title and image */
+    margin-bottom: 15px; /* Space between top section and details */
+}
+
+.modal-top-section .modal-title {
+    flex: 1; /* Allow title to take available space */
+    margin-bottom: 0; /* Remove bottom margin if any */
+}
+
+.modal-top-section .modal-img {
+    max-width: 50%; /* Limit image width in the top section */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Contain the image within the area */
+    border-radius: 8px; /* Add some border radius */
+}
+
+.modal-img {
+    display: block; /* Remove extra space below the image */
+    width: 100%; /* Make image responsive within its container */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 400px; /* Limit height */
+    object-fit: cover; /* Cover the area, potentially cropping */
+    border-radius: 8px; /* Keep the border radius */
+    margin-bottom: 1rem; /* Add some bottom margin */
+}
+
 .modal-title {
+    font-size: 1.8rem;
     color: var(--brown-main);
-    font-size: 1.2rem;
-    font-weight: 700;
-    margin-bottom: 0.5em;
-    text-align: center;
+    margin-bottom: 0.5rem;
 }
+
 .modal-desc {
+    font-size: 1.1rem;
     color: var(--brown-dark);
-    font-size: 1rem;
-    margin-bottom: 1em;
-    text-align: center;
+    margin-bottom: 1rem;
 }
+
 .modal-tags {
     display: flex;
-    gap: 0.5rem;
     flex-wrap: wrap;
-    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
 }
+
 .modal-tags span {
-    background: var(--brown-light);
-    color: var(--brown-main);
+    background: var(--brown-main);
+    color: var(--brown-light);
     padding: 0.3rem 0.8rem;
-    border-radius: 20px;
+    border-radius: 4px;
     font-size: 0.9rem;
-    font-weight: 500;
 }
+
+.modal-details {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--brown-dark);
+    margin-top: 1rem;
+}
+
+/* Markdown content styling */
+.modal-details h4 {
+    color: var(--brown-main);
+    margin: 1.5rem 0 0.8rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.modal-details h3 {
+    color: var(--brown-main);
+    margin: 1.8rem 0 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.modal-details ul {
+    list-style-type: disc;
+    margin: 1rem 0 1rem 1.5rem;
+    padding-left: 1rem;
+}
+
+.modal-details li {
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+}
+
+.modal-details p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.modal-details strong {
+    font-weight: 600;
+    color: var(--brown-main);
+}
+
+.modal-details em {
+    font-style: italic;
+    color: var(--brown-dark);
+}
+
+.modal-details code {
+    background-color: rgba(124, 94, 60, 0.1);
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 0.9em;
+}
+
+.modal-details pre {
+    background-color: rgba(124, 94, 60, 0.1);
+    padding: 1rem;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: 1rem 0;
+}
+
+.modal-details pre code {
+    background-color: transparent;
+    padding: 0;
+}
+
+.modal-details blockquote {
+    border-left: 4px solid var(--brown-accent);
+    margin: 1rem 0;
+    padding: 0.5rem 0 0.5rem 1rem;
+    color: var(--brown-dark);
+    font-style: italic;
+}
+
 @media (max-width: 700px) {
-    .project-thumb, .modal-img {
-        height: 110px;
-    }
     .modal-content {
-        padding: 1.2rem 0.5rem 1.2rem 0.5rem;
+        width: 95%;
+        padding: 1.5rem;
+    }
+    
+    .modal-img {
+        max-height: 300px;
+    }
+    
+    .modal-title {
+        font-size: 1.5rem;
+    }
+    
+    .modal-desc {
+        font-size: 1rem;
+    }
+
+    .modal-details h3 {
+        font-size: 1.3rem;
+    }
+
+    .modal-details h4 {
+        font-size: 1.1rem;
     }
 }
 

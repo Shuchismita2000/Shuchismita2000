@@ -52,7 +52,7 @@ const projectData = {
     },
     office4: {
         img: 'assets/project-office4.png',
-        title: 'POC: AI Agent for Content Inventory Exploration',
+        title: 'Proof Of Concept : AI Agent for Content Inventory Exploration',
         desc: 'Developed a proof-of-concept AI agent to help the Content Development Team explore and analyze content inventory efficiently.',
         tags: ['AI Agent', 'Content Team'],
         details: `
@@ -76,19 +76,19 @@ const projectData = {
         
 - **Approach/Methodology**:
     
-    1. **Understanding the Problem**: Identified the pain points of manual content inventory checks and inconsistent tracking.
+    - **Understanding the Problem**: Identified the pain points of manual content inventory checks and inconsistent tracking.
         
-    2. **Data Preparation**: Data was extracted from Azure SQL to Google Sheets and downloaded as CSV files. Data cleaning involved fixing inconsistent column names, formatting, and removing errors.
+    - **Data Preparation**: Data was extracted from Azure SQL to Google Sheets and downloaded as CSV files. Data cleaning involved fixing inconsistent column names, formatting, and removing errors.
         
-    3. **Organizing Data**: Content was partitioned into logical folders by creator and content status (draft, published, archived) to simplify data access.
+    - **Organizing Data**: Content was partitioned into logical folders by creator and content status (draft, published, archived) to simplify data access.
         
-    4. **Building the Agent**: Developed a CSV agent using Langchain connected to the cleaned CSV files. The agent could perform SQL-like queries based on user text prompts.
+    - **Building the Agent**: Developed a CSV agent using Langchain connected to the cleaned CSV files. The agent could perform SQL-like queries based on user text prompts.
         
-    5. **Creating a UI**: Built a Streamlit app to simulate a chat interface for natural user interaction.
+    - **Creating a UI**: Built a Streamlit app to simulate a chat interface for natural user interaction.
         
-    6. **Prompt Engineering**: Designed prompts to specify content creator, status, and query type, ensuring relevant and formatted output.
+    - **Prompt Engineering**: Designed prompts to specify content creator, status, and query type, ensuring relevant and formatted output.
         
-    7. **Testing and Iteration**: Tested with real user queries, identified inconsistencies and performance issues, and outlined future improvements.
+    - **Testing and Iteration**: Tested with real user queries, identified inconsistencies and performance issues, and outlined future improvements.
         
 - **Outcome/Results**:
     
@@ -164,6 +164,68 @@ const projectData = {
 
 - **Impact**:
     The AI agent significantly transformed the operations team's reporting workflow. It eliminated manual data gathering and report creation, allowing team members to focus on analysis and client communication. The standardized reporting process improved consistency and reduced errors, leading to better client relationships and more efficient operations. The solution also provided a foundation for future automation initiatives in the organization.
+    `
+    },
+    office6: {
+        img: 'assets/project-office6.png',
+        title: 'Health Insurance Risk Assessment',
+        desc: 'Developed a machine learning model to assess customer risk profiles in health insurance, improving underwriting efficiency and accuracy.',
+        tags: ['Python', 'Classification', 'Databricks'],
+        details: `
+#### **Health Insurance Risk Assessment Model**
+
+- **Objective**:
+    - Developed a machine learning model to assess and predict customer risk profiles in health insurance
+    - Aimed to improve underwriting efficiency and accuracy in risk assessment
+    - Reduced manual processing time and standardized risk evaluation
+
+- **Key Technologies & Tools Used**:
+    - Python for model development and data processing
+    - Azure Databricks for scalable data processing and model deployment
+    - Machine Learning algorithms (Random Forest, XGBoost)
+    - Feature engineering and selection techniques
+    - Model monitoring and evaluation tools
+
+- **Approach/Methodology**:
+    1. Data Collection & Preprocessing:
+        - Gathered historical customer data including demographics, medical history, and claims data
+        - Performed data cleaning and feature engineering
+        - Handled missing values and outliers
+    
+    2. Model Development:
+        - Implemented multiple classification algorithms
+        - Used cross-validation for robust model evaluation
+        - Optimized hyperparameters for best performance
+    
+    3. Feature Engineering:
+        - Created relevant features from raw data
+        - Implemented feature selection techniques
+        - Developed risk score calculation methodology
+    
+    4. Model Deployment:
+        - Deployed model to Databricks endpoints
+        - Implemented real-time prediction pipeline
+        - Set up monitoring and logging
+
+- **Outcome/Results**:
+    - 40% reduction in manual underwriting time
+    - 85% accuracy in risk prediction
+    - Standardized risk assessment process
+    - Improved consistency in underwriting decisions
+    - Enhanced ability to identify high-risk profiles early
+
+- **Challenges & Solutions**:
+    - Data Quality: Inconsistent and missing medical records
+        * Solution: Implemented robust data cleaning and imputation techniques
+    
+    - Model Interpretability: Need for transparent risk assessment
+        * Solution: Used SHAP values and feature importance analysis
+    
+    - Real-time Processing: Requirement for quick risk assessment
+        * Solution: Optimized model and pipeline for low latency
+
+- **Impact**:
+    The risk assessment model significantly improved the efficiency and accuracy of the underwriting process. By automating risk evaluation, the system reduced processing time while maintaining high accuracy. The standardized approach ensured consistent risk assessment across different customer profiles. The model's ability to identify high-risk cases early helped in better resource allocation and improved customer service. The solution also provided valuable insights for product development and pricing strategies.
     `
     },
     self1: {

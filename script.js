@@ -36,7 +36,7 @@ const projectData = {
         img: 'assets/project-office1.png',
         title: 'Market Mix Modeling for Optimized Budget Allocation',
         desc: 'Prepared end-to-end solutions in Azure ML Studio for market-mix modeling and dynamic pricing for price optimization.',
-        tags: ['Azure ML Studio', 'Regression'],
+        tags: ['Azure ML Studio', 'Regression',"Retail-CPG", "Python", "MLflow"],
         details: `
 - **Objective**:
     - Developed a comprehensive market mix model to optimize marketing budget allocation across multiple channels
@@ -73,81 +73,142 @@ const projectData = {
         img: 'assets/project-office2.png',
         title: 'Dynamic Pricing for Optimizing Pricing Strategy',
         desc: 'Implemented dynamic pricing models to optimize product pricing strategies, increasing revenue and market competitiveness.',
-        tags: ['Azure ML Studio', 'Regression'],
+        tags: ['Azure ML Studio', 'Regression',"Retail-CPG",'MLflow', "Python"],
         details: `
-- **Objective**:
-    - Developed a dynamic pricing system to optimize product pricing strategies
-    - Aimed to maximize revenue while maintaining market competitiveness
-
-- **Key Technologies & Tools Used**:
-    - Azure ML Studio for model deployment
-    - Python for data analysis and modeling
-    - Regression analysis
-    - Market research tools
-
-- **Approach/Methodology**:
-    1. Market Analysis: Studied competitor pricing and market trends
-    2. Data Collection: Gathered historical sales and pricing data
-    3. Model Development: Created pricing optimization algorithms
-    4. Testing: Validated models with historical data
-    5. Implementation: Deployed in Azure ML Studio
-
-- **Outcome/Results**:
-    - 15% increase in revenue
-    - 20% improvement in market competitiveness
-    - More responsive pricing strategy
-    - Better understanding of price elasticity
-
-- **Challenges & Solutions**:
-    - Market Volatility: Implemented adaptive algorithms
-    - Data Integration: Created automated data pipelines
-    - Model Accuracy: Used ensemble methods for better predictions
-
-- **Impact**:
-    The dynamic pricing system significantly improved revenue and market position, while providing valuable insights into pricing strategies and customer behavior.`
+####  **Objective**:
+    
+This project was designed as a hands-on learning experience by the Enqurious team, focusing on developing and deploying dynamic pricing strategies. The goal was to optimize pricing decisions for GlobalMart's detergent brand, Tide, to increase revenue and maintain competitive positioning amid market pressures. By analyzing sales, competitor, customer behavior, and inventory data, the project aimed to maximize revenue while balancing demand and inventory efficiency.
+    
+#### **Key Technologies & Tools Used**:
+    
+- **Programming Languages & Libraries:**  
+        Python (pandas for data manipulation, statsmodels for regression modeling, scipy for optimization, matplotlib for visualization).
+        
+ - **Cloud Platform:**  
+        Azure ML Studio was leveraged for end-to-end model building, tracking, versioning via MLflow, and deployment including inference endpoints.
+        
+- **Techniques:**  
+        Marketing Mix Modeling, log-log and polynomial regression models to capture elasticity and nonlinear effects, L1 (Lasso) and L2 (Ridge) regularization to prevent overfitting, feature engineering to create meaningful predictors from sales and pricing data, and optimization techniques to simulate pricing scenarios.
+        
+####  **Approach/Methodology**:
+    
+- Integrated and preprocessed multiple datasets encompassing sales, pricing, competitor prices, customer behavior, and inventory data.
+        
+- Performed Exploratory Data Analysis (EDA) to identify patterns, seasonality, and key factors affecting demand for Tide detergent.
+        
+- Engineered features such as demand elasticity, competitor pricing influence, temporal variables, and inventory levels.
+        
+- Developed regression models (log-log and polynomial) with regularization (L1 and L2) to predict demand and optimize pricing strategy.
+        
+- Validated models using cross-validation and performance metrics (R-squared, RMSE).
+        
+- Implemented model lifecycle management with MLflow for reproducibility and version control.
+        
+- Automated deployment and monitoring through Azure ML Studio's CI/CD pipelines and inference endpoints.
+        
+#### **Outcome/Results**:
+    
+- Delivered a robust dynamic pricing model that successfully predicted demand sensitivity to price changes.
+        
+- Optimized Tide's pricing strategy to increase revenue while minimizing inventory inefficiencies and maintaining customer demand.
+        
+- Enabled GlobalMart to respond proactively to competitor pricing actions and market shifts.
+        
+- Facilitated data-driven pricing adjustments improving both profitability and customer satisfaction.
+        
+#### **Challenges & Solutions**:
+    
+- **Challenge:** Complex integration of diverse datasets with missing and noisy data.  
+        **Solution:** Applied thorough data cleaning, normalization, and feature engineering to create reliable predictors.
+        
+- **Challenge:** Capturing nonlinear and delayed effects of price changes on demand.  
+        **Solution:** Employed polynomial regression and lagged features, alongside L1/L2 regularization to improve model generalization.
+        
+- **Challenge:** Ensuring model reproducibility and smooth deployment in a production environment.  
+        **Solution:** Leveraged MLflow for model tracking/versioning and Azure ML Studio's CI/CD pipelines for automated deployment.
+        
+#### **Impact**:
+    
+- Provided GlobalMart with an adaptive pricing tool that increased profit margins and competitive edge in the detergent market.
+        
+- Reduced revenue leakage due to static pricing by enabling dynamic, data-driven price adjustments.
+        
+- Supported continuous improvement with a scalable model deployment and monitoring framework.
+        
+- Empowered the business to make strategic decisions informed by robust machine learning insights.`
     },
     office3: {
         img: 'assets/project-office3.png',
         title: 'Predicting Optimal Channel for New Product Launch',
         desc: 'Built predictive models to identify the most effective marketing channels for launching new products, improving launch success rates.',
-        tags: ['Python', 'Classification', 'Databricks'],
+        tags: ['Python', 'Classification', 'Azure ML Studio', 'MLflow', 'Retail-CPG'],
         details: `
-- **Objective**:
-    - Developed a predictive model to identify optimal marketing channels for new product launches
-    - Aimed to improve launch success rates and marketing efficiency
+#### **Objective**:
+    
+This project was prepared as a hands-on data science project designed for learning and skill development, serving the educational goals of Enqurious. The primary goal is to predict the optimal marketing and distribution channel for launching GlobalBev's innovative new beverage line. By leveraging historical sales, customer preferences, and competitive data, the project aims to identify the channel(s) that maximize reach and profitability, avoiding a broad but inefficient launch.
 
-- **Key Technologies & Tools Used**:
-    - Python for model development
-    - Classification algorithms
-    - Databricks for big data processing
-    - Machine learning libraries
+#### **Key Technologies & Tools Used**:
 
-- **Approach/Methodology**:
-    1. Data Analysis: Studied historical product launches
-    2. Feature Engineering: Created relevant predictors
-    3. Model Development: Built classification models
-    4. Validation: Tested model accuracy
-    5. Implementation: Deployed in Databricks
+- Predictive analytics and machine learning for modeling channel performance.
+    
+- Data cleaning and aggregation techniques.
+    
+- Exploratory Data Analysis (EDA) tools for insights extraction.
+    
+- Azure ML Studio for building, training, and deploying machine learning models.
+    
+- MLflow for model tracking, versioning, and reproducibility.
+    
+- CI/CD pipelines to automate model deployment.
+    
+- Production deployment tools for inference endpoints.
+    
+- Marketing and distribution channel data sources (e-commerce, Q-commerce, modern trade, general trade, HoReCa).
 
-- **Outcome/Results**:
-    - 40% improvement in launch success rates
-    - 35% reduction in marketing costs
-    - Better channel selection
-    - More efficient resource allocation
+#### **Approach/Methodology**:
 
-- **Challenges & Solutions**:
-    - Data Volume: Used Databricks for scalable processing
-    - Model Selection: Implemented multiple algorithms
-    - Integration: Created automated workflows
+- Clean, aggregate, and normalize historical sales, customer preferences, and competitive data across channels.
+    
+- Perform EDA to identify key performance indicators and regional customer preferences.
+    
+- Derive composite performance scores for each channel based on raw metrics like units sold, customer preference, and competitive pressure.
+    
+- Develop and evaluate machine learning models to predict the optimal channel for product launch.
+    
+- Integrate MLflow for lifecycle management and implement CI/CD pipelines for seamless deployment.
 
-- **Impact**:
-    The predictive model transformed product launch strategies, leading to more successful launches and better resource utilization.`
+#### **Outcome/Results**:
+    
+- Delivered a predictive model that accurately identified the best channel(s) for product launch with high confidence.
+        
+- Enabled GlobalBev to strategically focus marketing and distribution efforts, reducing wasted resources.
+        
+- Provided actionable insights into regional customer preferences and competitive dynamics.
+        
+#### **Challenges & Solutions**:
+    
+- Challenge: Gathering and normalizing diverse channel data with varying formats and granularity.  
+        Solution: Developed robust data cleaning and aggregation pipelines to create a unified dataset.
+        
+- Challenge: Identifying which features would best train the model and preparing the data accordingly required significant learning and effort.  
+        Solution: Conducted thorough feature engineering and exploratory data analysis to select impactful variables, improving model accuracy.
+        
+- Challenge: Ensuring reproducibility and smooth deployment.  
+        Solution: Used MLflow and CI/CD pipelines to automate model tracking, versioning, and deployment.
+        
+#### **Impact**:
+    
+- Helped GlobalBev launch its new beverage with a targeted channel strategy, leading to optimized resource allocation.
+        
+- Increased confidence in channel selection, resulting in higher market penetration and profitability.
+        
+- Set a foundation for continuous improvement through productionized machine learning models and monitoring.`
     },
     office4: {
         img: 'assets/project-office4.png',
         title: 'Proof Of Concept : AI Agent for Content Inventory Exploration',
         desc: 'Developed a proof-of-concept AI agent to help the Content Development Team explore and analyze content inventory efficiently.',
-        tags: ['AI Agent', 'Content Team'],
+        tags: ['AI Agent', 'Content Team', "Python", "Langchain", "Streamlit", "Azure SQl"],
         details: `
 #### **Objective**:
 
@@ -221,57 +282,73 @@ This AI agent fundamentally transformed how the content development team interac
         img: 'assets/project-office5.png',
         title: 'POC: AI Agent for Reporting to Client',
         desc: 'Created a proof-of-concept AI agent for the Ops Team to automate and streamline client reporting processes.',
-        tags: ['AI Agent', 'Ops Team'],
+        tags: ['AI Agent', 'Ops Team', "Python", "Langchain", "Streamlit", "Azure SQl"],
         details: `
-#### **POC 2: AI Agent for Reporting to Client (User: Operations Team)**
-
-- **Objective**:
-    - Developed an AI agent to automate and streamline the client reporting process, reducing manual effort and improving accuracy in report generation.
-    - Aimed to standardize reporting formats and ensure consistent delivery of insights across different client accounts.
-
-- **Key Technologies & Tools Used**:
-    - Large Language Models (Claude 3.7 Sonnet) for natural language processing and report generation
-    - Langchain framework for building the AI agent
-    - Streamlit for creating an interactive user interface
-    - Azure SQL Database for data storage and retrieval
-    - Python libraries for data processing and visualization
-    - Automated report generation tools and templates
-
-- **Approach/Methodology**:
-    1. Requirements Analysis: Identified key reporting needs and pain points in the current manual process
-    2. Data Integration: Connected to various data sources and standardized data formats
-    3. Agent Development: Built an AI agent capable of:
-        - Understanding reporting requirements
-        - Extracting relevant data
-        - Generating formatted reports
-        - Providing insights and recommendations
-    4. UI Development: Created an intuitive interface for report customization and generation
-    5. Testing & Validation: Conducted extensive testing with real client data and scenarios
-
-- **Outcome/Results**:
-    - Reduced report generation time by 70%
-    - Improved accuracy in data analysis and reporting
-    - Standardized reporting formats across all client accounts
-    - Enhanced ability to handle multiple report types and formats
-    - Increased client satisfaction with timely and consistent reports
-
-- **Challenges & Solutions**:
-    - Data Integration: Complex data sources with varying formats
-        * Solution: Implemented robust data connectors and standardization processes
-    - Report Customization: Different clients required different report formats
-        * Solution: Created flexible templates and customization options
-    - Accuracy Verification: Ensuring AI-generated reports were accurate
-        * Solution: Implemented validation checks and human review processes
-
-- **Impact**:
-    The AI agent significantly transformed the operations team's reporting workflow. It eliminated manual data gathering and report creation, allowing team members to focus on analysis and client communication. The standardized reporting process improved consistency and reduced errors, leading to better client relationships and more efficient operations. The solution also provided a foundation for future automation initiatives in the organization.
-    `
+#### **Objective**:
+    
+The AI Agent is designed to streamline and automate responses to operational and tactical queries from both internal and external stakeholders, significantly reducing manual effort in tracking and reporting. Its primary goal is to enable real-time, accurate, and role-based access to critical insights from database systems, facilitating faster decision-making and enhancing communication with clients and internal teams.
+    
+#### **Key Technologies & Tools Used**:
+    
+- **AI Models & Multi-Agent Architecture:** A hierarchical multi-agent system comprising an Orchestrator Agent (for query intent detection and routing), Engagement Agent (tracking learner engagement and progress), and Performance Agent (monitoring assessment lifecycle and certification status).
+        
+- **Data Processing & Storage:** Utilizes Azure Data Lake Storage (ADLS) with a structured pipeline involving Bronze, Silver, and Gold layers for refined data preparation.
+        
+- **Batch Inference & Liquid Clustering:** Performs batch inference twice daily on partitioned data clusters (based on client ID, program ID, and table type) to ensure scalable and efficient processing.
+        
+- **Reporting Automation:** Generates customizable CSV/PDF reports on-demand based on user queries.
+        
+- **Security & Access Control:** Implements role-based access control (RBAC) to safeguard sensitive data and ensure users receive data appropriate to their access levels.
+        
+#### **Approach/Methodology**:
+    
+- Data flows from ADLS through Bronze, Silver, and Gold layers, where Liquid Clustering partitions data to improve query efficiency.
+        
+- The Orchestrator Agent interprets the user query's intent and routes it to appropriate sub-agents—Engagement or Performance—running in parallel to process relevant data.
+        
+- Users (internal ops teams like Prateek, Abhilipsa, Chetan; monitoring team Amit, Soma; mentors; and external clients/managers) submit text-based queries, often with templates or FAQs, allowing non-technical users to interact via natural language.
+        
+- The system filters queries based on security level and user roles before executing batch inference to provide structured or textual responses in real time.
+        
+- Reporting tools convert query results into preferred formats such as CSV or PDF, delivered instantly to users.
+        
+#### **Outcome/Results**:
+    
+- The AI Agent reduced report generation time from hours of manual effort to seconds, significantly improving operational efficiency.
+        
+- Enabled non-technical users to obtain accurate, tailored insights without needing SQL knowledge, enhancing accessibility and user experience.
+        
+- Improved decision-making speed by providing timely, actionable information on learner engagement, assessment progress, and certification status.
+        
+- Minimized repetitive manual queries and reporting overhead for the operations team.
+        
+#### **Challenges & Solutions**:
+    
+- **Challenge:** Handling complex, diverse queries from users with varying technical skills.  
+        **Solution:** Designed a multi-agent system with intent classification and query routing to specialized agents for accurate, context-aware responses. Provided predefined query templates for common requests to assist non-technical users.
+        
+- **Challenge:** Ensuring data security and role-based access across internal and external stakeholders.  
+        **Solution:** Implemented strict RBAC and query-level security filters to prevent unauthorized data exposure.
+        
+- **Challenge:** Processing large volumes of data efficiently while maintaining real-time responsiveness.  
+        **Solution:** Adopted batch inference with liquid clustering to partition data and optimize compute resources.
+        
+- **Challenge:** Preventing hallucinated or incorrect AI responses that could mislead users.  
+        **Solution:** Established response validation rules and fallback mechanisms to ensure accuracy and reliability.
+        
+#### **Impact**:
+    
+- Transformed the reporting workflow by automating complex tracking and reporting tasks, freeing the operations team to focus on higher-value activities.
+        
+- Enhanced transparency and communication with clients and internal stakeholders through instant, precise reporting.
+        
+- Established a scalable and secure AI-powered reporting framework adaptable to future expansions and additional data sources.`
     },
     self1: {
         img: 'assets/project-self1.png',
         title: 'Market Mix Modeling',
         desc: 'Built a market mix model to analyze and optimize marketing spend across multiple channels for improved ROI.',
-        tags: ['Python', 'Marketing Analytics'],
+        tags: ['Python', 'Retail-CPG', "MLflow", "Azure ML Studio", "Regression"],
         details: `
 #### **Objective**:
 
@@ -343,7 +420,7 @@ To improve marketing ROI for a global hair care brand by optimizing the allocati
         img: 'assets/project-self2.png',
         title: 'Water Potability Prediction',
         desc: 'Developed a scoring system to profile water quality using data analysis and machine learning techniques.',
-        tags: ['Python', 'Data Science'],
+        tags: ['Python', "Regression", "EDA", "Feature Engineering"],
         details: `
 #### **Objective**:
 
@@ -437,7 +514,7 @@ To develop a regression model to predict the **potability** of water based on it
         img: 'assets/project-self3.png',
         title: 'Book Recommendation (RAG Chain)',
         desc: 'Implemented a book recommendation system using Retrieval-Augmented Generation (RAG) and NLP techniques.',
-        tags: ['Python', 'RAG', 'NLP'],
+        tags: ['Python', 'RAG', 'NLP', "Streamlit", "Pinecone", "Langchain", "Hugging Face", "Ollama"],
         details: `
 #### **Objective**:
 
@@ -537,7 +614,7 @@ To develop an AI-powered chatbot that provides personalized book recommendations
         img: 'assets/project-self4.png',
         title: 'Customer Churn Prediction',
         desc: 'Created predictive models to identify customers at risk of churning, enabling targeted retention strategies.',
-        tags: ['Python', 'Classification'],
+        tags: ['Python', 'Classification', "MLflow", "EDA", "Feature Engineering", "Streamlit", "Model Deployment", "Render"],
         details: `
 #### **Objective**:
 
@@ -694,7 +771,7 @@ To predict customer churn in a subscription-based telecommunications service usi
         img: 'assets/project-self5.png',
         title: 'Customer Purchase Behavior',
         desc: 'Analyzed and modeled customer purchase patterns to uncover insights and drive business growth.',
-        tags: ['Python', 'EDA'],
+        tags: ['Python', 'EDA', "RFM", "CLV", "Data Visualization"],
         details: `
 #### **Objective**:
 
@@ -877,3 +954,18 @@ navLinksItems.forEach(link => {
       navLinks.classList.remove('open');
     });
   });
+
+// Update project tags dynamically
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.project-card').forEach(card => {
+        const key = card.getAttribute('data-project');
+        const data = projectData[key];
+        
+        if (data && data.tags) {
+            const tagsContainer = card.querySelector('.project-tags');
+            if (tagsContainer) {
+                tagsContainer.innerHTML = data.tags.map(tag => `<span>${tag}</span>`).join('');
+            }
+        }
+    });
+});

@@ -32,6 +32,7 @@ window.addEventListener('scroll', () => {
 
 // Project modal data updated with all projects
 const projectData = {
+    // Office Projects
     office1: {
         img: 'assets/project-office1.png',
         title: 'Market Mix Modeling for Optimized Budget Allocation',
@@ -344,6 +345,73 @@ The AI Agent is designed to streamline and automate responses to operational and
         
 - Established a scalable and secure AI-powered reporting framework adaptable to future expansions and additional data sources.`
     },
+    
+    office6: {
+        img: 'assets/project-office6.png',
+        title: 'Autonomous Agentic AI Solution for Healthcare',
+        desc: 'The Autonomous Agentic AI Solution for Healthcare, built with Azure AI Services, automates data retrieval and generates real-time insights to enhance decision-making and operational efficiency for hospital staff.',
+        tags: ['Python', 'Azure AI Foundry', 'Azure AI Search Service', 'Databricks Unity Cataloge', 'Healthcare Domain', 'Streamlit'],
+        details: `
+#### **Objective**:
+
+To develop a predictive maintenance system for manufacturing equipment that could forecast potential failures and optimize maintenance schedules. The goal was to reduce unplanned downtime, extend equipment lifespan, and optimize maintenance resource allocation.
+
+#### **Key Technologies & Tools Used**:
+
+- **Tools**: Python, Azure AI Foundry, Azure AI Search Service, Databricks Unity Cataloge, Streamlit
+- **Techniques**: RAG CHAIN to figure out the required KPI asked by non clinical staff, agent for generating SQL query & executing it, Azure AI Search Service for searching the data, Azure AI Foundry for training the model, Databricks Unity Cataloge for processing the data, Streamlit for the UI.
+- **Data Sources**: Basic Healthcare Data( 10 Hospitals, 12 Departments, 2000 staff, 100 Patient Records) and 12 Departments Non-Clinical Data( 100+ KPIs). Curated by Myself. Stored in Azure Data Lake Storage, then processed in Databricks Unity Cataloge.  
+
+#### **Approach/Methodology**:
+
+- **Data Ingestion and Structuring**:
+    
+    - Healthcare data is ingested into **Azure Data Lake Storage** and structured across **Bronze, Silver, and Gold layers**.
+        
+    - Metadata and KPI metrics are stored in **Delta Tables** and **Unity Catalog**, ensuring high-quality and accessible data.
+        
+- **Code Generation Agent**:
+    
+    - The **Agent** generates SQL/Python code from natural language queries submitted by healthcare staff.
+        
+    - It uses metadata and structured knowledge to formulate accurate queries tailored to specific healthcare departments.
+        
+- **Execution & Insight Generation**:
+    
+    - The generated code is executed in **Databricks**, with the **Execution Agent** querying the knowledge base.
+        
+    - **LLM model** processes the results and generates **insights** (e.g., patient readmission rates, bed utilization) for non-technical users in a readable format.
+        
+- **Real-Time Querying**:
+    
+    - Queries are executed on-demand, delivering actionable insights instantly. Healthcare staff can ask natural language questions like, “What is the current readmission rate for last month?” and get real-time data-driven answers.
+        
+- **Guardrails & Security**:
+    
+    - Implement **guardrails** to prevent access to sensitive data unless proper authorization is granted.
+
+#### **Outcome/Results**:
+
+- **Empowered Non-Technical Staff**: Healthcare staff, including nurses, doctors, and administrators, can now access real-time insights without needing technical expertise. This has drastically reduced their reliance on the IT department for querying data.
+- **Increased Operational Efficiency**: The agent automates data retrieval and insight generation, saving hours of manual effort for staff. Tasks that once took days can now be done within minutes, freeing up valuable resources for patient care.
+- **Improved Decision-Making**:By providing timely, accurate insights, the agent helps healthcare providers make data-driven decisions, improving overall hospital management and patient outcomes.
+
+
+#### **Challenges & Solutions**:
+
+- **Challenge**: Generating Executable Code from Natural Language Queries
+  - **Solution**: Fine-tuned the Code Generation Agent using iterative feedback to ensure that it generates syntactically correct and executable SQL/Python code. Added validation checks to confirm the generated code is valid before execution
+
+- **Challenge**: Preventing AI Misinterpretations (Hallucinations)
+  - **Solution**: Incorporated rigorous validation rules within the Code Generation Agent to ensure it outputs only valid SQL/Python code.
+
+#### **Impact**:
+
+- The AI Agent has reduced the time spent on generating reports from hours to seconds. Healthcare staff can now get insights instantly, improving their workflow efficiency.
+- The solution is built to scale with the hospital’s growth, capable of integrating with new data sources and handling increased workloads efficiently.
+- Non-technical users can now easily access tailored data, reducing dependence on technical teams and allowing for quicker, more informed decision-making.`
+    },
+    // Self Projects
     self1: {
         img: 'assets/project-self1.png',
         title: 'Market Mix Modeling',

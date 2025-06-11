@@ -1,10 +1,5 @@
 # 👋 Hi there, I'm Shuchismita Mallick
 
-<div align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=40&pause=1000&color=2E8B57&center=true&vCenter=true&random=false&width=600&height=100&lines=Data+Scientist+(AI%2FML);AI+Solutions+Developer" alt="Typing SVG" />
-</div>
-
-
 ## 🚀 About Me
 
 I'm a passionate Data Scientist with 3 years of experience in transforming complex data into actionable insights. My journey in data science is driven by a deep curiosity for understanding patterns and solving real-world problems through AI/ML solutions.

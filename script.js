@@ -41,33 +41,52 @@ const projectData = {
         details: `
 - **Objective**:
     - Developed a comprehensive market mix model to optimize marketing budget allocation across multiple channels
-    - Aimed to maximize ROI and improve marketing efficiency by identifying the most effective channels
+
+    - Aimed to maximize ROI and improve marketing efficiency by identifying the most effective channels of a fictious e-commerce company GlobalMart
+
+  
 
 - **Key Technologies & Tools Used**:
-    - Azure ML Studio for model development and deployment
-    - Python for data preprocessing and analysis
-    - Regression analysis techniques
-    - Statistical modeling tools
+
+	- Azure ML Studio for model development and deployment
+
+	- **Tools**: Python (pandas, statsmodels, scipy, matplotlib), Excel
+
+	- **Techniques**: Marketing Mix Modeling (MMM), Linear and Log-Log Regression, Hill Function for saturation modeling, Adstock transformation, Multicollinearity diagnosis (VIF), Optimization via simulation
+
+  
 
 - **Approach/Methodology**:
-    1. Data Collection: Gathered historical marketing spend and performance data across channels
-    2. Feature Engineering: Created relevant variables to capture marketing impact
-    3. Model Development: Built regression models to quantify channel effectiveness
-    4. Validation: Tested model accuracy and robustness
-    5. Implementation: Deployed solution in Azure ML Studio
 
-- **Outcome/Results**:
-    - 25% improvement in marketing ROI
-    - 30% reduction in inefficient spend
-    - Better understanding of channel effectiveness
-    - Data-driven budget allocation decisions
+	- Data Creation: Gathered historical marketing spend and performance data across channels
 
-- **Challenges & Solutions**:
+	- **Data Preparation**: Cleaned and standardized  2years of historical marketing and sales data with different granularity, as sales daily, offline marketing investment weekly, online marketing investment daily and pricing chart of products monthly. 
+
+	- **Feature Engineering**: Created adstocked and saturation-adjusted versions of media spend, extracted temporal features (month, week, year), and lagged variables (e.g., gasoline price) to reflect behavioral delays.
+
+- **Modeling**:
+
+    - Built both additive and log-log OLS regression models to estimate the impact (elasticities) of each marketing channel.
+
+    - Included control variables (e.g., price, SKUs, holidays) to isolate true media effects.
+
+    - Performed multicollinearity checks and reduced model complexity by dropping redundant variables and interaction terms.
+
+    - **Optimization**: Simulated budget reallocation scenarios using the \`scipy.optimize.minimize\` function, constrained by historical ranges and statistical significance.
+  
+
+- **Challenges**:
+
     - Data Quality: Implemented robust data cleaning and validation
+
     - Model Complexity: Used stepwise regression for feature selection
+
     - Integration: Created seamless Azure ML Studio workflow
 
+  
+
 - **Impact**:
+
     The market mix model transformed how marketing budgets were allocated, leading to significant cost savings and improved campaign performance. The solution provided actionable insights for marketing strategy optimization.`
     },
     office2: {

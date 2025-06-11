@@ -5,7 +5,7 @@
 <img src="https://capsule-render.vercel.app/api?type=waving&color=2E8B57&height=100&section=header&text=Data%20Scientist%20(AI/ML)&fontSize=30&fontAlignY=35&animation=twinkling"/>
 
 </div>
-.
+
 ## 🚀 About Me
 
 I'm a passionate Data Scientist with 3 years of experience in transforming complex data into actionable insights. My journey in data science is driven by a deep curiosity for understanding patterns and solving real-world problems through AI/ML solutions.

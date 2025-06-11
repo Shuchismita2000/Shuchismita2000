@@ -209,7 +209,7 @@ This project was prepared as a hands-on data science project designed for learni
         img: 'assets/project-office4.png',
         title: 'Proof Of Concept : AI Agent for Content Inventory Exploration',
         desc: 'Developed a proof-of-concept AI agent to help the Content Development Team explore and analyze content inventory efficiently.',
-        tags: ['AI Agent', 'Content Team', "Python", "Langchain", "Streamlit", "Azure SQl"],
+        tags: ['AI Agent', 'Content Team', "Python", "Langchain", "Streamlit", "Azure SQL"],
         details: `
 #### **Objective**:
 
@@ -283,7 +283,7 @@ This AI agent fundamentally transformed how the content development team interac
         img: 'assets/project-office5.png',
         title: 'POC: AI Agent for Reporting to Client',
         desc: 'Created a proof-of-concept AI agent for the Ops Team to automate and streamline client reporting processes.',
-        tags: ['AI Agent', 'Ops Team', "Python", "Langchain", "Streamlit", "Azure SQl"],
+        tags: ['AI Agent', 'Ops Team', "Python", "Langchain", "Streamlit", "Azure SQL"],
         details: `
 #### **Objective**:
     

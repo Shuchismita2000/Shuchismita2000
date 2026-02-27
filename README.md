@@ -9,14 +9,14 @@
 
 ## 🚀 About Me
 
-I'm a passionate Data Scientist with 3 years of experience in transforming complex data into actionable insights. My journey in data science is driven by a deep curiosity for understanding patterns and solving real-world problems through AI/ML solutions.
+I'm a passionate Data Scientist with 3.5 years of experience in transforming complex data into actionable insights. My journey in data science is driven by a deep curiosity for understanding patterns and solving real-world problems through AI/ML solutions.
 
 ## 💡 Core Competencies
 
 - 🤖 **AI/ML Development**: Specializing in building and deploying machine learning models
 - 📊 **Data Analytics**: Transforming raw data into business insights
 - 🔧 **Tools & Platforms**: Azure ML Studio, Databricks, AI Foundry, MLflow
-- 💻 **Programming**: Python, SQL, with focus on ML/AI implementations
+- 💻 **Programming**: Python, Pyspark, SQL, with focus on ML/AI implementations
 
 ## 🛠️ Technical Expertise
 
